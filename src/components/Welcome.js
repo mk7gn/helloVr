@@ -1,26 +1,16 @@
-import React from 'react';
-import {
-    asset,
-    Pano,
-    Text,
-    View,
-    VrButton,
-} from 'react-vr';
+import React, {Component} from 'react';
+import {View, Text, VrButton, Pano, asset} from 'react-vr'
+import PropTypes from 'prop-types';
 
-export default class App extends React.Component {
-    constructor() {
-        super();
-
-        this.state = {textColor: 'white', helloBg: 'gray'};
-    }
-
+class Welcome extends Component {
     render() {
+        const {history} = this.props;
         return (
             <View>
-                <Pano source={asset('pano.jpg')}/>
+                <Pano source={asset('chess-world.jpg')}/>
                 <Text
                     style={{
-                        backgroundColor  : this.state.helloBg,
+                        backgroundColor  : 'blue',
                         fontSize         : 0.8,
                         fontWeight       : '400',
                         layoutOrigin     : [0.5, 0.5],
@@ -31,7 +21,7 @@ export default class App extends React.Component {
                         color            : 'white',
                         transform        : [{translate: [0, 0, -3]}],
                     }}>
-                    Hello VR!
+                    Welcome VR!
                 </Text>
                 <View style={{
                     flex         : 1,
@@ -45,28 +35,25 @@ export default class App extends React.Component {
                         margin         : 0.1,
                         height         : 0.3,
                         backgroundColor: 'green'
-                    }} onEnter={() => this.setState({textColor: 'red'})}
-                          onExit={() => this.setState({textColor: 'white'})}
-                    onClick={() => this._onViewClicked('green')}>
-                        <Text style={{fontSize: 0.2, color: this.state.textColor, textAlign: 'center'}}>Green</Text>
+                    }} onClick={() => history.push('/')}>
+                        <Text style={{fontSize: 0.2, textAlign: 'center'}}>Hello</Text>
                     </VrButton>
 
                     <VrButton style={{
                         margin         : 0.1,
                         height         : 0.3,
                         backgroundColor: 'blue'
-                    }} onEnter={() => this.setState({textColor: 'red'})}
-                              onExit={() => this.setState({textColor: 'white'})}
-                              onClick={() => this._onViewClicked('blue')}>
-                        <Text style={{fontSize: 0.2, color: this.state.textColor, textAlign: 'center'}}>Blue</Text>
+                    }} onClick={() => history.push('/welcome')}>
+                        <Text style={{fontSize: 0.2, textAlign: 'center'}}>Welcome</Text>
                     </VrButton>
 
                 </View>
             </View>
         );
     }
+}
 
-    _onViewClicked = (color) => {this.setState({helloBg: color}) };
+Welcome.propTypes = {};
+Welcome.defaultProps = {};
 
-
-};
+export default Welcome;

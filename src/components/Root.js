@@ -1,15 +1,14 @@
 import React, {Component} from 'react';
 import {Provider} from 'react-redux';
-import {ConnectedRouter as Router} from 'react-router-redux'
-import history from '../history'
-import App from './app';
+import App from './App';
 import store from '../redux/store';
+import { MemoryRouter as Router} from 'react-router'
 
 class Root extends Component {
     render() {
         return (
             <Provider store={store}>
-                <Router history={history}>
+                <Router>
                     <App/>
                 </Router>
             </Provider>
