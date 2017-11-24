@@ -7,7 +7,7 @@ class BackButton extends Component {
         const {history} = this.props;
         return (
             <VrButton onClick={() => history.push('/')}>
-                <Text>Back</Text>
+                <Text>Home</Text>
             </VrButton>
         );
     }
