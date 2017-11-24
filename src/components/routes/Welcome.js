@@ -15,7 +15,7 @@ class Welcome extends Component {
                 <View style={styles.navContainer}>
                     {categories.map((category) => {
                         return <VrButton style={styles.navItem} onClick={() => history.push(category.route)} key={category.id}>
-                            <Text>{category.name}</Text>
+                            <Text style={styles.itemText}>{category.name}</Text>
                         </VrButton>
                     })}
                 </View>
@@ -54,15 +54,20 @@ const styles = StyleSheet.create({
         borderWidth: 0.03,
        borderColor: 'red',
        marginLeft: 0.4,
-       marginRight: 0.4
-   }
+       marginRight: 0.4,
+       justifyContent: 'center',
+       alignItems: 'center'
+   },
+    itemText: {
+        fontSize: 0.2,
+    }
 });
 
 const categories = [
     {
         id: 1,
-        name: 'Winter mountain',
-        route: '/winter-mountain'
+        name: 'Stars',
+        route: '/stars'
     },
     {
         id: 2,
@@ -71,13 +76,13 @@ const categories = [
     },
     {
         id: 3,
-        name: 'category 3',
-        route: 'cat3'
+        name: 'Road',
+        route: '/road'
     },
     {
         id: 4,
-        name: 'category 4',
-        route: 'cat4'
+        name: 'Lake',
+        route: '/lake'
     },
 ];
 
