@@ -67,22 +67,22 @@ const categories = [
     {
         id: 1,
         name: 'Stars',
-        route: '/stars'
+        route: '/cat1'
     },
     {
         id: 2,
-        name: 'Gpp-Space',
-        route: '/gpp-space'
+        name: 'Mountain',
+        route: '/cat2'
     },
     {
         id: 3,
-        name: 'Road',
-        route: '/road'
+        name: 'Lake',
+        route: '/cat3'
     },
     {
         id: 4,
-        name: 'Lake',
-        route: '/lake'
+        name: 'Bridge',
+        route: '/cat4'
     },
 ];
 

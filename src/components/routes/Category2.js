@@ -3,19 +3,19 @@ import {Pano, View, Text, asset, VrButton} from 'react-vr';
 import BackButton from '../common/BackButton';
 import PropTypes from 'prop-types';
 
-class Stars extends Component {
+class CAtegory2 extends Component {
     render() {
         const {history} = this.props;
         return (
             <View>
-                <Pano source={asset('pano.jpg')}/>
+                <Pano source={asset('lake.jpg')}/>
                 <BackButton history={history}/>
             </View>
         );
     }
 }
 
-Stars.propTypes = {};
-Stars.defaultProps = {};
+CAtegory2.propTypes = {};
+CAtegory2.defaultProps = {};
 
-export default Stars;
+export default CAtegory2;

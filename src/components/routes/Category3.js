@@ -3,19 +3,19 @@ import {Pano, View, Text, asset, VrButton} from 'react-vr';
 import BackButton from '../common/BackButton';
 import PropTypes from 'prop-types';
 
-class Lake extends Component {
+class Category3 extends Component {
     render() {
         const {history} = this.props;
         return (
             <View>
-                <Pano source={asset('lake.jpg')}/>
+                <Pano source={asset('road.jpg')}/>
                 <BackButton history={history}/>
             </View>
         );
     }
 }
 
-Lake.propTypes = {};
-Lake.defaultProps = {};
+Category3.propTypes = {};
+Category3.defaultProps = {};
 
-export default Lake;
+export default Category3;

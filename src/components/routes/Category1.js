@@ -3,7 +3,7 @@ import {Pano, View, Text, asset, VrButton} from 'react-vr';
 import BackButton from '../common/BackButton';
 import PropTypes from 'prop-types';
 
-class GppSpace extends Component {
+class Category1 extends Component {
     render() {
         const {history} = this.props;
         return (
@@ -15,7 +15,7 @@ class GppSpace extends Component {
     }
 }
 
-GppSpace.propTypes = {};
-GppSpace.defaultProps = {};
+Category1.propTypes = {};
+Category1.defaultProps = {};
 
-export default GppSpace;
+export default Category1;
